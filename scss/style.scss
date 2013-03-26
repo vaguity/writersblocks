@@ -1,0 +1,99 @@
+@import "partials/base";
+
+// Global
+// ######
+
+html, body {
+	color: $dark;
+	background-color: $dark;
+	font-size: 16px;
+	font-family: $body;
+}
+
+a {
+	&:link { color: $blue; text-decoration: none; }
+	&:visited { color: $blue; text-decoration: none; }
+	&:hover { color: $blue; text-decoration: none; }
+	&:active { color: $blue; text-decoration: none; position: relative; top: 1px; }
+}
+
+p {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	font-family: $display;
+	font-weight: normal;
+	padding: .5em 0;
+	margin: 0;
+}
+
+h4, h5, h6 {
+	font-family: $body;
+	font-weight: bold;
+	padding: .5em 0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 64px;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+h3 {
+	font-size: 36px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+	font-style: italic;
+}
+
+// Header
+// ######
+
+header#header {
+	background: url('../img/grey.png');
+	background-color: $light;
+	padding: 30px 0;
+	border-bottom: 4px solid $darkblue;
+	h1 {
+		padding: 0;
+	}
+}
+
+// Content
+// ###
+
+div#content {
+	background-color: $light;
+	padding: 30px 0;
+}
+
+// Footer
+// ######
+
+footer#footer {
+	background-color: $dark;
+	border-top: 4px solid $darkblue;
+	color: $light;
+	padding: 30px 0;
+	a {
+		&:link { color: $light; text-decoration: none; }
+		&:visited { color: $light; text-decoration: none; }
+		&:hover { color: $light; text-decoration: none; }
+		&:active { color: $light; text-decoration: none; position: relative; top: 1px; }
+	}
+}

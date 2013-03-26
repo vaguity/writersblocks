@@ -1,4 +1,5 @@
 # Exclude these files from the git repo
+webfont/
  
 # Hidden system files
 *.DS_Store

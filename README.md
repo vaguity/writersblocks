@@ -1,4 +1,4 @@
-# Writers' Blocks
+# Writer's Blocks
 
 ## A WordPress theme for writers' portfolios.
 

@@ -12,17 +12,32 @@ add_action( 'widgets_init', 'remove_html5bp_sidebar', 11 );
 // Register the global sidebar
 // ###########################
 
-function register_global_sidebar() {
+function register_footer_widget_1() {
 	register_sidebar(array(
-		'name' => __( 'Global Sidebar' ),
-		'id' => 'global-sidebar',
-		'description' => __( 'Widgets in this area will be shown on almost every page.' ),
+		'name' => __( 'Footer Widget 1' ),
+		'id' => 'footer-widget-1',
+		'description' => __( 'The widgets in this area will show in the leftmost area of the footer. Recommend only one widget.' ),
+		'before_widget' => '',
+		'after_widget' => '',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>'
 	));
 }
 
-add_action( 'widgets_init', 'register_global_sidebar' );
+function register_footer_widget_2() {
+	register_sidebar(array(
+		'name' => __( 'Footer Widget 2' ),
+		'id' => 'footer-widget-2',
+		'description' => __( 'The widgets in this area will show in the center area of the footer. Recommend only one widget.' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+}
+
+add_action( 'widgets_init', 'register_footer_widget_1' );
+add_action( 'widgets_init', 'register_footer_widget_2' );
 
 // Register the primary and social nav menus
 // #########################################

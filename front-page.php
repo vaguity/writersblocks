@@ -8,7 +8,7 @@ get_header(); ?>
 <div id="content" role="main">
   <div class="row">
   
-  <?php
+  <?php /*
     $i = 0;
     $zone_posts = z_get_posts_in_zone( 'clips' );
     foreach ( $zone_posts as $zone_post ) :
@@ -20,7 +20,7 @@ get_header(); ?>
 
     // echo get_post_meta($post->ID, 'key', true);
 
-  ?>
+  */ ?>
 
   </div><!-- .row -->
 </div><!-- #content -->

@@ -33,7 +33,7 @@
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/vendor/modernizr-2.6.1.min.js") ?>
 
-    <!-- Wordpress Head Items -->
+    <!-- Wordpress head items -->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <?php wp_head(); ?>
@@ -59,34 +59,23 @@
 	<div class="row">
 	<div class="col_12 omega">
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+        <h2><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('description'); ?></a></h2>
 	</div><!-- .col_12 -->
 	</div><!-- .row -->
 </header>
 	
 <div class="row">
 <nav id="primary-navigation">
-	<div class="col_4 pre_6">
-		<?php wp_nav_menu(
-			array(
-				'theme_location' => 'primary-navigation',
-				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				'before' => '&nbsp;&nbsp;&nbsp;',
-				'after' => '&nbsp;&nbsp;&nbsp;'
-			)
-		); ?>
-	</div><!-- .col_3 -->
-</nav>
+<div class="col_4 pre_8 omega">
+	<?php wp_nav_menu(
+		array(
+			'theme_location' => 'primary-navigation',
+			'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			'before' => '',
+			'after' => ''
+		)
+	); ?>
+</div><!-- .col_6 -->
+</nav><!-- #primary-navigation -->
 
-<nav id="social-navigation">
-	<div class="col_2 omega">
-        <?php wp_nav_menu(
-            array(
-                'theme_location' => 'social-navigation',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'before' => '&nbsp;&nbsp;&nbsp;',
-                'after' => '&nbsp;&nbsp;&nbsp;'
-            )
-        ); ?>
-	</div><!-- .col_1 -->
-</nav>
 </div><!-- .row -->

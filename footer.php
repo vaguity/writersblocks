@@ -6,11 +6,43 @@
 
   <footer id="footer">
     <div class="row">
-    <div class="col_12 omega">
-      <p>&copy; <?php echo date("Y"); ?> <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a>.
-        <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
-      </p>
-    </div><!-- .col_12 -->
+    <div class="col_4">
+        <div id="footer-left">
+        <?php 
+        if ( dynamic_sidebar('footer-widget-1') ) : 
+        else : 
+        ?>
+        <?php endif; ?>
+        </div><!-- #footer-left -->
+    </div>
+    <div class="col_4">
+        <div id="footer-center">
+        <?php 
+        if ( dynamic_sidebar('footer-widget-2') ) : 
+        else : 
+        ?>
+        <?php endif; ?>
+        </div><!-- #footer-center -->
+    </div>
+    <div class="col_4 omega">
+        <div id="footer-right">
+        <h3>Menu title</h3>
+        <nav id="footer-navigation">
+        <?php wp_nav_menu(
+          array(
+            'theme_location' => 'primary-navigation',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'before' => '',
+            'after' => ''
+          )
+        ); ?>
+        </nav><!-- #footer-navigation -->
+
+        <p>&copy; <?php echo date("Y"); ?> <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a>.
+            <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
+        </p>
+        </div><!-- #footer-right -->
+    </div><!-- .col_4 -->
     </div><!-- .row -->
   </footer>
 </div><!-- #container -->

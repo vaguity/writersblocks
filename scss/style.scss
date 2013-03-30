@@ -1,19 +1,24 @@
 @import "partials/base";
 
+// ----------
 // Global
-// ######
+// ----------
 
 html, body {
 	color: $dark;
-	background-color: $dark;
+	background-color: $darkblue;
 	font-size: 16px;
 	font-family: $body;
+}
+
+#container {
+	background-color: $light;
 }
 
 a {
 	&:link { color: $blue; text-decoration: none; }
 	&:visited { color: $blue; text-decoration: none; }
-	&:hover { color: $blue; text-decoration: none; }
+	&:hover { color: $darkblue; text-decoration: none; }
 	&:active { color: $blue; text-decoration: none; position: relative; top: 1px; }
 }
 
@@ -22,78 +27,113 @@ p {
 	margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	padding: .5em 0;
+	margin: 0;
+	line-height: 1em;
+}
+
 h1, h2, h3 {
 	font-family: $display;
 	font-weight: normal;
-	padding: .5em 0;
-	margin: 0;
 }
 
 h4, h5, h6 {
 	font-family: $body;
 	font-weight: bold;
-	padding: .5em 0;
-	margin: 0;
 }
 
-h1 {
-	font-size: 64px;
+h1 { font-size: 64px; }
+h2 { font-size: 48px; }
+h3 { font-size: 36px; }
+h4 { font-size: 24px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; font-style: italic; }
+
+ul, ol {
+	li {
+		font-size: 16px;
+	}
 }
 
-h2 {
-	font-size: 48px;
-}
-
-h3 {
-	font-size: 36px;
-}
-
-h4 {
-	font-size: 24px;
-}
-
-h5 {
-	font-size: 18px;
-}
-
-h6 {
-	font-size: 16px;
-	font-style: italic;
-}
-
+// ----------
 // Header
-// ######
+// ----------
 
 header#header {
 	background: url('../img/grey.png');
 	background-color: $light;
 	padding: 30px 0;
-	border-bottom: 4px solid $darkblue;
+	border-bottom: 1px solid $lightgray;
 	h1 {
 		padding: 0;
 	}
+	h2 {
+		font-size: 36px;
+	}
 }
 
+// ----------
+// Primary nav
+// ----------
+
+nav#primary-navigation {
+	ul {
+		list-style-type: none;
+		li {
+			margin: 0;
+			margin-right: 10px;
+			display: inline-block;
+			font-family: $display;
+			font-size: 18px;
+		}
+	}
+}
+
+// ----------
 // Content
-// ###
+// ----------
 
 div#content {
 	background-color: $light;
 	padding: 30px 0;
 }
 
+// ----------
 // Footer
-// ######
+// ----------
 
 footer#footer {
-	background-color: $dark;
-	border-top: 4px solid $darkblue;
+	#footer-left, #footer-center {
+		padding-right: 10%;
+		border-right: 1px solid $light;
+	}
+	font-weight: 400;
+	background-color: $darkblue;
+	border-top: 1px solid $blue;
 	color: $light;
 	padding: 30px 0;
+	nav#footer-navigation {
+		ul {
+			list-style-type: none;
+			li {
+				font-size: 16px;
+				margin: 0;
+			}
+		}
+	}
 	a {
-		&:link { color: $light; text-decoration: none; }
+		&:link { color: $light; text-decoration: underline; }
 		&:visited { color: $light; text-decoration: none; }
-		&:hover { color: $light; text-decoration: none; }
-		&:active { color: $light; text-decoration: none; position: relative; top: 1px; }
+		&:hover { color: $lightgray; text-decoration: none; }
+		&:active { color: $lightgray; text-decoration: none; position: relative; top: 1px; }
+	}
+	h3 {
+		a:link, a:visited, a:hover, a:active {
+			text-decoration: none;
+		}
+	}
+	.rsswidget img {
+		display: none;
 	}
 }

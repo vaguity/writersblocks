@@ -26,7 +26,7 @@
     </div>
     <div class="col_4 omega">
         <div id="footer-right">
-        <h3>Menu title</h3>
+        <h3>Sitemap</h3>
         <nav id="footer-navigation">
         <?php wp_nav_menu(
           array(
@@ -52,6 +52,7 @@
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+  <script src="<?php bloginfo('stylesheet_directory'); ?>/js/writersblocks-ck.js"></script>
 
 
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>

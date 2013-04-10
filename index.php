@@ -44,6 +44,6 @@ get_header(); ?>
   </div><!-- .row -->
 </div><!-- #content -->
 
-<?php get_sidebar('global-sidebar'); ?>
+<?php /* get_sidebar('global-sidebar'); */ ?>
 
 <?php get_footer(); ?>

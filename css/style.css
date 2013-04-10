@@ -27,7 +27,7 @@ p {
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  padding: 0.5em 0;
+  padding: 0.75em 0 0 0;
   margin: 0;
   line-height: 1em; }
 
@@ -61,6 +61,14 @@ h6 {
 ul li, ol li {
   font-size: 16px; }
 
+hr {
+  border: 0;
+  border-top: 1px solid #dddddd;
+  background-color: none;
+  height: 0;
+  margin: 20px 0;
+  color: transparent; }
+
 header#header {
   background: url("../img/grey.png");
   background-color: #efefef;
@@ -71,18 +79,53 @@ header#header {
   header#header h2 {
     font-size: 36px; }
 
-nav#primary-navigation ul {
-  list-style-type: none; }
-  nav#primary-navigation ul li {
-    margin: 0;
-    margin-right: 10px;
-    display: inline-block;
-    font-family: ChunkFive, ChunkFiveRegular, "Helvetica Neue", Arial, Helvetica, "Arial Black", sans-serif;
-    font-size: 18px; }
+nav#primary-navigation {
+  text-align: center; }
+  nav#primary-navigation ul {
+    list-style-type: none;
+    display: block;
+    border-radius: 0 0 20px 20px;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    border-top: 0;
+    box-shadow: inset 0 0 5px 1px #dddddd; }
+    nav#primary-navigation ul li {
+      margin: 0;
+      margin-right: 12px;
+      padding: 0.5em 0;
+      display: inline-block;
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 18px; }
+      nav#primary-navigation ul li:first-child {
+        margin-left: 12px; }
 
 div#content {
   background-color: #efefef;
-  padding: 30px 0; }
+  padding: 0 0 30px 0; }
+  div#content #clip article p {
+    line-height: 1.5em;
+    margin: 20px 0; }
+  div#content #clip article .copy {
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    padding: 0 20px; }
+  div#content #clip article section.author {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 30px 0; }
+    div#content #clip article section.author strong {
+      font-weight: bold;
+      color: #3399ff; }
+  div#content #clip article section.originally-published {
+    text-align: center;
+    padding: 30px 0; }
+  div#content #clip article aside.pullquote {
+    border: 1px solid #dddddd;
+    font-size: 24px;
+    line-height: 1.5em;
+    margin: 30px 0;
+    padding: 30px;
+    background-color: #fff; }
 
 footer#footer {
   font-weight: 400;

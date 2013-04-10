@@ -69,25 +69,25 @@ function be_clip_metaboxes( $meta_boxes ) {
 			array(
 				'name' => 'Pullquote',
 				'desc' => 'Brief pullquote from the clip.',
-				'id' => $prefix . 'clip_pullquote',
+				'id' => $prefix . 'pullquote',
 				'type' => 'textarea_small'
 			),
 			array(
 				'name' => 'Link',
 				'desc' => 'URL where clip was originally published.',
-				'id' => $prefix . 'clip_link',
+				'id' => $prefix . 'link',
 				'type' => 'text'
 			),
 			array(
 				'name' => 'Date Originally Published',
 				'desc' => 'Date the clip was originally published.',
-				'id' => $prefix . 'clip_pubdate',
+				'id' => $prefix . 'pubdate',
 				'type' => 'text_date_timestamp'
 			),
 			array(
 				'name' => 'Image',
 				'desc' => 'Upload an image or enter a URL.',
-				'id' => $prefix . 'clip_image',
+				'id' => $prefix . 'image',
 				'type' => 'file',
 				'save_id' => true, // save ID using true
 				'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
@@ -95,7 +95,7 @@ function be_clip_metaboxes( $meta_boxes ) {
 			array(
 				'name' => 'Display Style',
 				'desc' => 'Select what to display in the teaser.',
-				'id' => $prefix . 'clip_display',
+				'id' => $prefix . 'display',
 				'type' => 'radio',
 				'options' => array(
 					array('name' => 'Image', 'value' => 'display_image'),

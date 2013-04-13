@@ -23,9 +23,7 @@ get_header(); ?>
         // get the cardtype, if it's display_image
         // why is it stripping all the slashes out of $zp_image?
         if ($zp_cardtype == 'display_image') {
-          $zp_card = '<div class="image-card card"><a href="' . $zp_permalink . '"><div class="image" style="background-image: url(\'' . $zp_image . '\');"></div>
-
-          <img src="' . $zp_image . '" /></a><h3><a href="' . $zp_permalink . '">' . $zp_title . '</a></div>';
+          $zp_card = '<div class="image-card card"><a href="' . $zp_permalink . '"><div class="image" style="background-image: url(\'' . $zp_image . '\');"></div></a></div>';
         }
         // for eventual hovertitle: <h3>' . $zp_title . '</h3>\n
         elseif ($zp_cardtype == 'display_pullquote') {

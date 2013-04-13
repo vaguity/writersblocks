@@ -23,11 +23,11 @@ get_header(); ?>
         // get the cardtype, if it's display_image
         // why is it stripping all the slashes out of $zp_image?
         if ($zp_cardtype == 'display_image') {
-          $zp_card = '<div class="image-card card"><a href="' . $zp_permalink . '"><div class="image" style="background-image: url(\'' . $zp_image . '\');"></div></a></div>';
+          $zp_card = '<div class="image-card card"><h3><a href="' . $zp_permalink . '">' . $zp_title . '</a></h3><a href="' . $zp_permalink . '"><div class="image" style="background-image: url(\'' . $zp_image . '\');"></div></a></div>';
         }
         // for eventual hovertitle: <h3>' . $zp_title . '</h3>\n
         elseif ($zp_cardtype == 'display_pullquote') {
-          $zp_card = '<div class="quote-card card"><a href="' . $zp_permalink . '"><p>' . $zp_quote . '</p></a></div>';
+          $zp_card = '<div class="quote-card card"><h3><a href="' . $zp_permalink . '">' . $zp_title . '</a></h3><a href="' . $zp_permalink . '"><p>' . $zp_quote . '</p></a></div>';
         }
         else {
           $zp_card = '<div class="title-card card"><a href="' . $zp_permalink . '"><h3>' . $zp_title . '</h3></a></div>';
@@ -39,7 +39,7 @@ get_header(); ?>
         if ($i %3 == 0) {
           echo '<div class="col_4 omega">' . $zp_card . '</div><!-- .col_4 --></div><!-- .row -->';
         }
-        elseif ($i %4 == 0) {
+        elseif ($i %3 == 1) {
           echo '<div class="row"><div class="col_4">' . $zp_card . '</div><!-- .col_4 -->';
         }
         else {

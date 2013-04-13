@@ -133,7 +133,7 @@ div#content {
 
 	div#front-page-clips {
 		.row>div {
-			padding: 20px 0;
+			padding: 10px 0;
 		}
 		.card {
 			background-color: $white;
@@ -147,15 +147,38 @@ div#content {
 				border: 3px solid $lightgray;
 				background-color: $lightgray;
 				background-size: cover;
+				background-position: center;
 				height: 210px;
 			}
 			h3 {
-				font-weight: bold;
-				font-family: $body;
-				font-size: 16px;
+				display: none;
+				padding: 0;
+				font-family: $display;
+				font-size: 26px;
 				line-height: 1.5em;
-				max-height: 60px;
+				height: 210px;
 				overflow: hidden;
+			}
+			&:hover {
+				h3 {
+					a {
+						padding: 10px;
+						display: block;
+						height: 210px;
+						text-shadow: 1px 1px 0 $dark;
+						&:hover {
+							color: $blue;
+						}
+					}
+					margin: 31px 21px;
+					background-color: rgba(50,50,50,0.3);
+					border: 3px solid $lightgray;
+					position: absolute;
+					z-index: 1;
+					top: 0px;
+					left: 0px;
+					display: block;
+				}
 			}
 		}
 		.quote-card {
@@ -167,7 +190,40 @@ div#content {
 				line-height: 1.5em;
 				max-height: 216px;
 				overflow: hidden;
+				&:before {
+					content:"“";
+				}
 			}
+			h3 {
+				display: none;
+				padding: 0;
+				font-family: $display;
+				font-size: 26px;
+				line-height: 1.5em;
+				height: 210px;
+				overflow: hidden;
+			}
+			// &:hover {
+			// 	h3 {
+			// 		a {
+			// 			padding: 10px;
+			// 			display: block;
+			// 			height: 210px;
+			// 			text-shadow: 1px 1px 0 $dark;
+			// 			&:hover {
+			// 				color: $blue;
+			// 			}
+			// 		}
+			// 		margin: 31px 21px;
+			// 		background-color: rgba(50,50,50,0.3);
+			// 		border: 3px solid $lightgray;
+			// 		position: absolute;
+			// 		z-index: 1;
+			// 		top: 0px;
+			// 		left: 0px;
+			// 		display: block;
+			// 	}
+			// }
 		}
 		.title-card {
 			padding: 20px;
@@ -186,7 +242,6 @@ div#content {
 	// ----------
 
 	#clip article {
-		
 
 		p {
 			line-height: 1.5em;
@@ -204,7 +259,35 @@ div#content {
 			border: 1px solid $lightgray;
 			background-color: #fff;
 			padding: 0 20px;
+			img {
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				&.alignright {
+					float: right;
+					border: 3px solid $lightgray;
+					margin: 0 0 0 2%;
+				}
+				&.alignleft {
+					float: left;
+					border: 3px solid $lightgray;
+					margin: 0 2% 0 0;
+				}
+				&.aligncenter {
+					margin: 0 auto;
+					padding: 1%;
+					background-color: $lightgray;
+				}
+				&.size-full {
+					width: 98%;
+					height: auto;
+					padding: 1%;
+					background-color: $lightgray;
+					margin: 0;
+				}
+			}
 		}
+
 		footer {
 			div.clip-meta {
 				padding: 30px 0;
@@ -228,6 +311,9 @@ div#content {
 				line-height: 1.5em;
 				padding: 30px;
 				background-color: #fff;
+			}
+			div.pullquote {
+				padding: 0 30px;
 			}
 			nav.prev-next {
 				margin: auto;

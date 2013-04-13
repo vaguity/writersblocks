@@ -111,7 +111,7 @@ div#content {
   background-color: #efefef;
   padding: 0 0 30px 0; }
   div#content div#front-page-clips .row > div {
-    padding: 20px 0; }
+    padding: 10px 0; }
   div#content div#front-page-clips .card {
     background-color: white;
     border: 1px solid #dddddd;
@@ -123,14 +123,32 @@ div#content {
       border: 3px solid #dddddd;
       background-color: #dddddd;
       background-size: cover;
+      background-position: center;
       height: 210px; }
     div#content div#front-page-clips .image-card h3 {
-      font-weight: bold;
-      font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
-      font-size: 16px;
+      display: none;
+      padding: 0;
+      font-family: ChunkFive, ChunkFiveRegular, "Helvetica Neue", Arial, Helvetica, "Arial Black", sans-serif;
+      font-size: 26px;
       line-height: 1.5em;
-      max-height: 60px;
+      height: 210px;
       overflow: hidden; }
+    div#content div#front-page-clips .image-card:hover h3 {
+      margin: 31px 21px;
+      background-color: rgba(50, 50, 50, 0.3);
+      border: 3px solid #dddddd;
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      left: 0px;
+      display: block; }
+      div#content div#front-page-clips .image-card:hover h3 a {
+        padding: 10px;
+        display: block;
+        height: 210px;
+        text-shadow: 1px 1px 0 #444444; }
+        div#content div#front-page-clips .image-card:hover h3 a:hover {
+          color: #3399ff; }
   div#content div#front-page-clips .quote-card {
     padding: 20px; }
     div#content div#front-page-clips .quote-card p {
@@ -139,6 +157,16 @@ div#content {
       font-size: 24px;
       line-height: 1.5em;
       max-height: 216px;
+      overflow: hidden; }
+      div#content div#front-page-clips .quote-card p:before {
+        content: "“"; }
+    div#content div#front-page-clips .quote-card h3 {
+      display: none;
+      padding: 0;
+      font-family: ChunkFive, ChunkFiveRegular, "Helvetica Neue", Arial, Helvetica, "Arial Black", sans-serif;
+      font-size: 26px;
+      line-height: 1.5em;
+      height: 210px;
       overflow: hidden; }
   div#content div#front-page-clips .title-card {
     padding: 20px; }
@@ -159,6 +187,28 @@ div#content {
     border: 1px solid #dddddd;
     background-color: #fff;
     padding: 0 20px; }
+    div#content #clip article .copy img {
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0; }
+      div#content #clip article .copy img.alignright {
+        float: right;
+        border: 3px solid #dddddd;
+        margin: 0 0 0 2%; }
+      div#content #clip article .copy img.alignleft {
+        float: left;
+        border: 3px solid #dddddd;
+        margin: 0 2% 0 0; }
+      div#content #clip article .copy img.aligncenter {
+        margin: 0 auto;
+        padding: 1%;
+        background-color: #dddddd; }
+      div#content #clip article .copy img.size-full {
+        width: 98%;
+        height: auto;
+        padding: 1%;
+        background-color: #dddddd;
+        margin: 0; }
   div#content #clip article footer div.clip-meta {
     padding: 30px 0; }
     div#content #clip article footer div.clip-meta section.author {
@@ -177,6 +227,8 @@ div#content {
     line-height: 1.5em;
     padding: 30px;
     background-color: #fff; }
+  div#content #clip article footer div.pullquote {
+    padding: 0 30px; }
   div#content #clip article footer nav.prev-next {
     margin: auto;
     padding: 30px;

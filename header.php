@@ -62,20 +62,20 @@
         <h2><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('description'); ?></a></h2>
 	</div><!-- .col_12 -->
 	</div><!-- .row -->
-</header>
-	
-<div class="row">
-<nav id="primary-navigation">
-<div class="col_4 pre_8 omega">
-	<?php wp_nav_menu(
-		array(
-			'theme_location' => 'primary-navigation',
-			'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			'before' => '',
-			'after' => ''
-		)
-	); ?>
-</div><!-- .col_6 -->
-</nav><!-- #primary-navigation -->
 
-</div><!-- .row -->
+    <div class="row">
+    <nav id="primary-navigation">
+    <div class="col_4 pre_8 omega">
+        <?php wp_nav_menu(
+            array(
+                'theme_location' => 'primary-navigation',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'before' => '',
+                'after' => ''
+            )
+        ); ?>
+    </div><!-- .col_6 -->
+    </nav><!-- #primary-navigation -->
+
+    </div><!-- .row -->
+</header>

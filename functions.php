@@ -98,6 +98,7 @@ function be_clip_metaboxes( $meta_boxes ) {
 				'id' => $prefix . 'display',
 				'type' => 'radio',
 				'options' => array(
+					array('name' => 'Title', 'value' => 'display_title'),
 					array('name' => 'Image', 'value' => 'display_image'),
 					array('name' => 'Pullquote', 'value' => 'display_pullquote')				
 				)

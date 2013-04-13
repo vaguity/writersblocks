@@ -64,6 +64,9 @@ get_header(); ?>
 
         <?php if (!empty($clip_pullquote)) {
         echo '<aside class="pullquote">' . $clip_pullquote . '</aside>';
+        }
+        else {
+          echo '<hr />';
         } ?>
 
         <nav class="prev-next">

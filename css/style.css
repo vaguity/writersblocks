@@ -72,7 +72,8 @@ hr {
 blockquote {
   font-size: 16px;
   border-left: 3px solid #3399ff;
-  margin-left: 20px;
+  margin: 0 20px;
+  padding: 0 20px;
   color: #888; }
 
 header#header {
@@ -150,6 +151,10 @@ div#content {
   div#content #clip article p {
     line-height: 1.5em;
     margin: 20px 0; }
+    div#content #clip article p:first-child {
+      font-size: 1.5em; }
+  div#content #clip article h2 {
+    line-height: 1.25em; }
   div#content #clip article .copy {
     border: 1px solid #dddddd;
     background-color: #fff;

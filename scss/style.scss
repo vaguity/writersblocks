@@ -120,6 +120,9 @@ header#header {
 			li {
 				a {
 					color: $light;
+					&:hover, &:active {
+						color: $white;
+					}
 				}
 				padding: .25em 2%;
 				margin: 0;

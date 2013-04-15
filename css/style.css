@@ -113,6 +113,8 @@ header#header {
         font-size: 16px; }
         #primary-navigation nav ul li a {
           color: #efefef; }
+          #primary-navigation nav ul li a:hover, #primary-navigation nav ul li a:active {
+            color: white; }
         #primary-navigation nav ul li:last-child {
           border-right: 0; }
 

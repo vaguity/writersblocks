@@ -162,16 +162,17 @@ div#content {
 			&:hover {
 				h3 {
 					a {
+						color: $blue;
 						padding: 10px;
 						display: block;
 						height: 210px;
-						text-shadow: 1px 1px 0 $dark;
+						text-shadow: 1px 2px 0 #000;
 						&:hover {
 							color: $blue;
 						}
 					}
 					margin: 31px 21px;
-					background-color: rgba(50,50,50,0.2);
+					background-color: rgba(51,153,255,0.4);
 					border: 3px solid $lightgray;
 					position: absolute;
 					z-index: 1;
@@ -390,6 +391,7 @@ footer#footer {
 		p {
 			font-size: 12px;
 			padding: 0 0 16px 0;
+			margin: 0;
 			&.tweetlink {
 				padding-bottom: 20px;
 			}

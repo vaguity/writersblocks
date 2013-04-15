@@ -135,7 +135,7 @@ div#content {
       overflow: hidden; }
     div#content div#front-page-clips .image-card:hover h3 {
       margin: 31px 21px;
-      background-color: rgba(50, 50, 50, 0.2);
+      background-color: rgba(51, 153, 255, 0.4);
       border: 3px solid #dddddd;
       position: absolute;
       z-index: 1;
@@ -143,10 +143,11 @@ div#content {
       left: 0px;
       display: block; }
       div#content div#front-page-clips .image-card:hover h3 a {
+        color: #3399ff;
         padding: 10px;
         display: block;
         height: 210px;
-        text-shadow: 1px 1px 0 #444444; }
+        text-shadow: 1px 2px 0 black; }
         div#content div#front-page-clips .image-card:hover h3 a:hover {
           color: #3399ff; }
   div#content div#front-page-clips .quote-card {
@@ -282,6 +283,7 @@ footer#footer {
     margin: 4px 0 24px 5%; }
   footer#footer #twitter-feed p {
     font-size: 12px;
-    padding: 0 0 16px 0; }
+    padding: 0 0 16px 0;
+    margin: 0; }
     footer#footer #twitter-feed p.tweetlink {
       padding-bottom: 20px; }

@@ -24,7 +24,7 @@ a:active {
 
 p {
   line-height: 1.5em;
-  margin: 0; }
+  margin: 20px 0; }
 
 h1, h2, h3, h4, h5, h6 {
   padding: 0.75em 0 0 0;
@@ -135,7 +135,7 @@ div#content {
       overflow: hidden; }
     div#content div#front-page-clips .image-card:hover h3 {
       margin: 31px 21px;
-      background-color: rgba(50, 50, 50, 0.3);
+      background-color: rgba(50, 50, 50, 0.2);
       border: 3px solid #dddddd;
       position: absolute;
       z-index: 1;
@@ -176,66 +176,66 @@ div#content {
       padding: 0;
       max-height: 216px;
       overflow: hidden; }
-  div#content #clip article p {
+  div#content article p {
     line-height: 1.5em;
     margin: 20px 0; }
-    div#content #clip article p:first-child {
+    div#content article p:first-child {
       font-size: 1.5em; }
-  div#content #clip article h2 {
+  div#content article h2 {
     line-height: 1.25em; }
-  div#content #clip article .copy {
+  div#content article .copy {
     border: 1px solid #dddddd;
     background-color: #fff;
     padding: 0 20px; }
-    div#content #clip article .copy img {
+    div#content article .copy img {
       border-radius: 0;
       -webkit-border-radius: 0;
       -moz-border-radius: 0; }
-      div#content #clip article .copy img.alignright {
+      div#content article .copy img.alignright {
         float: right;
         border: 3px solid #dddddd;
         margin: 0 0 0 2%; }
-      div#content #clip article .copy img.alignleft {
+      div#content article .copy img.alignleft {
         float: left;
         border: 3px solid #dddddd;
         margin: 0 2% 0 0; }
-      div#content #clip article .copy img.aligncenter {
+      div#content article .copy img.aligncenter {
         margin: 0 auto;
         padding: 1%;
         background-color: #dddddd; }
-      div#content #clip article .copy img.size-full {
+      div#content article .copy img.size-full {
         width: 98%;
         height: auto;
         padding: 1%;
         background-color: #dddddd;
         margin: 0; }
-  div#content #clip article footer div.clip-meta {
+  div#content article footer div.clip-meta {
     padding: 30px 0; }
-    div#content #clip article footer div.clip-meta section.author {
+    div#content article footer div.clip-meta section.author {
       text-align: center;
       font-size: 1.5em;
       padding-bottom: 30px; }
-      div#content #clip article footer div.clip-meta section.author strong {
+      div#content article footer div.clip-meta section.author strong {
         font-weight: bold;
         color: #3399ff; }
-    div#content #clip article footer div.clip-meta section.originally-published {
+    div#content article footer div.clip-meta section.originally-published {
       text-align: center;
       padding: 0; }
-  div#content #clip article footer aside.pullquote {
+  div#content article footer aside.pullquote {
     border: 1px solid #dddddd;
     font-size: 24px;
     line-height: 1.5em;
     padding: 30px;
     background-color: #fff; }
-  div#content #clip article footer div.pullquote {
+  div#content article footer div.pullquote {
     padding: 0 30px; }
-  div#content #clip article footer nav.prev-next {
+  div#content article footer nav.prev-next {
     margin: auto;
     padding: 30px;
     text-align: center;
     font-size: 24px;
     line-height: 1.5em; }
-    div#content #clip article footer nav.prev-next > div {
+    div#content article footer nav.prev-next > div {
       margin: auto; }
 
 footer#footer {
@@ -244,14 +244,16 @@ footer#footer {
   border-top: 1px solid #3399ff;
   color: #efefef;
   padding: 30px 0; }
-  footer#footer #footer-left, footer#footer #footer-center {
-    padding-right: 10%;
-    border-right: 1px solid #efefef; }
-  footer#footer nav#footer-navigation ul {
-    list-style-type: none; }
-    footer#footer nav#footer-navigation ul li {
-      font-size: 16px;
-      margin: 0; }
+  footer#footer #footer-left, footer#footer #footer-center, footer#footer #footer-right {
+    padding: 0 20px; }
+  footer#footer ul li {
+    list-style-type: square;
+    padding: 10px 0; }
+  footer#footer nav#footer-navigation ul li {
+    list-style-type: none;
+    font-size: 16px;
+    margin: 0;
+    padding: 0; }
   footer#footer a:link {
     color: #efefef;
     text-decoration: underline; }
@@ -266,7 +268,18 @@ footer#footer {
     text-decoration: none;
     position: relative;
     top: 1px; }
-  footer#footer h3 a:link, footer#footer h3 a:visited, footer#footer h3 a:hover, footer#footer h3 a:active {
-    text-decoration: none; }
+  footer#footer h3 {
+    padding-bottom: 15px; }
+    footer#footer h3 a:link, footer#footer h3 a:visited, footer#footer h3 a:hover, footer#footer h3 a:active {
+      text-decoration: none; }
   footer#footer .rsswidget img {
     display: none; }
+  footer#footer #twitter-feed img.tweetphoto {
+    float: right;
+    border: 1px solid #efefef;
+    margin: 4px 0 24px 5%; }
+  footer#footer #twitter-feed p {
+    font-size: 12px;
+    padding: 0 0 16px 0; }
+    footer#footer #twitter-feed p.tweetlink {
+      padding-bottom: 20px; }

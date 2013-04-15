@@ -48,7 +48,7 @@ function register_custom_menus() {
   register_nav_menus(
     array( 
     	'primary-navigation' => __( 'Primary Navigation' ),
-    	'social-navigation' => __( 'Social Navigation' ),
+    	//'social-navigation' => __( 'Social Navigation' ),
     )
   );
 }

@@ -24,7 +24,7 @@ a {
 
 p {
 	line-height: 1.5em;
-	margin: 0;
+	margin: 20px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -171,7 +171,7 @@ div#content {
 						}
 					}
 					margin: 31px 21px;
-					background-color: rgba(50,50,50,0.3);
+					background-color: rgba(50,50,50,0.2);
 					border: 3px solid $lightgray;
 					position: absolute;
 					z-index: 1;
@@ -241,7 +241,7 @@ div#content {
 	// Clip page
 	// ----------
 
-	#clip article {
+	article {
 
 		p {
 			line-height: 1.5em;
@@ -334,21 +334,31 @@ div#content {
 // ----------
 
 footer#footer {
-	#footer-left, #footer-center {
-		padding-right: 10%;
-		border-right: 1px solid $light;
+	#footer-left, #footer-center, #footer-right {
+		padding: 0 20px;
 	}
+	// #footer-center {
+	// 	//border: 1px solid $light;
+	// 	border-width: 0 1px;
+	// }
 	font-weight: 400;
 	background-color: $darkblue;
 	border-top: 1px solid $blue;
 	color: $light;
 	padding: 30px 0;
+	ul {
+		li {
+			list-style-type: square;
+			padding: 10px 0;
+		}
+	}
 	nav#footer-navigation {
 		ul {
-			list-style-type: none;
 			li {
+				list-style-type: none;
 				font-size: 16px;
 				margin: 0;
+				padding: 0;
 			}
 		}
 	}
@@ -359,11 +369,28 @@ footer#footer {
 		&:active { color: $lightgray; text-decoration: none; position: relative; top: 1px; }
 	}
 	h3 {
+		padding-bottom: 15px;
 		a:link, a:visited, a:hover, a:active {
 			text-decoration: none;
 		}
 	}
-	.rsswidget img {
-		display: none;
+	.rsswidget {
+		img {
+			display: none;
+		}
+	}
+	#twitter-feed {
+		img.tweetphoto {
+			float: right;
+			border: 1px solid $light;
+			margin: 4px 0 24px 5%;
+		}
+		p {
+			font-size: 12px;
+			padding: 0 0 16px 0;
+			&.tweetlink {
+				padding-bottom: 20px;
+			}
+		}
 	}
 }

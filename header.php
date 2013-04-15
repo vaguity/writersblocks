@@ -63,8 +63,10 @@
 	</div><!-- .col_12 -->
 	</div><!-- .row -->
 
-    <div class="row">
-    <nav id="primary-navigation">
+</header>
+
+<div id="primary-navigation">
+    <nav class="row">
     <div class="col_4 pre_8 omega">
         <?php wp_nav_menu(
             array(
@@ -75,7 +77,5 @@
             )
         ); ?>
     </div><!-- .col_6 -->
-    </nav><!-- #primary-navigation -->
-
-    </div><!-- .row -->
-</header>
+    </nav>
+</div><!-- .row #primary-navigation -->

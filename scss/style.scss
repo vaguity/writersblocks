@@ -190,6 +190,8 @@ div#content {
 				line-height: 1.5em;
 				max-height: 216px;
 				overflow: hidden;
+				margin: 0;
+				padding: 0;
 				&:before {
 					content:"“";
 				}

@@ -84,6 +84,7 @@ header#header {
 	border-bottom: 1px solid $lightgray;
 	h1 {
 		padding: 0;
+		line-height: 1.25em;
 		a {
 			color: $dark;
 			&:hover, &:active {
@@ -93,6 +94,7 @@ header#header {
 	}
 	h2 {
 		font-size: 32px;
+		line-height: 1.25em;
 		a {
 			color: $blue;
 			&:hover, &:active {

@@ -21,3 +21,15 @@ $palette6: #fff;
 $display: ChunkFive, ChunkFiveRegular, "Helvetica Neue", Arial, Helvetica, "Arial Black", sans-serif;
 $body: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
 $menu: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../webfont/Chunkfive-webfont.eot');
+    src: url('../webfont/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfont/Chunkfive-webfont.woff') format('woff'),
+         url('../webfont/Chunkfive-webfont.ttf') format('truetype'),
+         url('../webfont/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

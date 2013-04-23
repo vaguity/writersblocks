@@ -53,10 +53,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
   <script src="<?php bloginfo('stylesheet_directory'); ?>/js/moment.min.js"></script>
-  <script src="<?php bloginfo('stylesheet_directory'); ?>/js/writersblocks-ck.js"></script>
   <script src="<?php bloginfo('stylesheet_directory'); ?>/js/twitter-ck.js"></script>
-
-
 
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/main.js") ?>

@@ -21,7 +21,6 @@ get_header(); ?>
         $zp_quote = get_post_meta( $zone_post->ID, '_clip_pullquote', true );
 
         // get the cardtype, if it's display_image
-        // why is it stripping all the slashes out of $zp_image?
         if ($zp_cardtype == 'display_image') {
           $zp_card = '<div class="image-card card"><h3><a href="' . $zp_permalink . '">' . $zp_title . '</a></h3><a href="' . $zp_permalink . '"><div class="image" style="background-image: url(\'' . $zp_image . '\');"></div></a></div>';
         }

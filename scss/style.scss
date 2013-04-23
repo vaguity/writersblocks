@@ -113,7 +113,7 @@ header#header {
 	border-top: 2px solid $blue;
 	border-bottom: 2px solid $white;
 	nav {
-		text-align: center;
+		text-align: right;
 		ul {
 			list-style-type: none;
 			display: block;
@@ -146,12 +146,13 @@ header#header {
 div#content {
 	background-color: $light;
 	padding: 0 0 30px 0;
+	border-bottom: 1px solid $white;
 
 	// ----------
 	// Front page
 	// ----------
 
-	div#front-page-clips {
+	div#front-page-clips, div#more-clips {
 		.row>div {
 			padding: 10px 0;
 		}
@@ -160,6 +161,7 @@ div#content {
 			border: 1px solid $lightgray;
 			margin: auto;
 			vertical-align: middle;
+			min-height: 210px;
 		}
 		.image-card {
 			padding: 20px;
@@ -181,16 +183,8 @@ div#content {
 			}
 			&:hover {
 				h3 {
-					a {
-						color: $blue;
-						padding: 10px;
-						display: block;
-						height: 210px;
-						text-shadow: 1px 2px 0 #000;
-						&:hover {
-							color: $blue;
-						}
-					}
+					font-family: $body;
+					font-weight: bold;
 					margin: 31px 21px;
 					background-color: rgba(50,50,50,0.4);
 					border: 3px solid $lightgray;
@@ -199,6 +193,16 @@ div#content {
 					top: 0px;
 					left: 0px;
 					display: block;
+					a {
+						color: $blue;
+						padding: 10px;
+						display: block;
+						height: 210px;
+						text-shadow: 1px 2px 0 $black;
+						&:hover {
+							color: $blue;
+						}
+					}
 				}
 			}
 		}
@@ -207,7 +211,7 @@ div#content {
 			a {
 				color: $dark;
 				&:hover {
-					color: $black;
+					color: $blue;
 				}
 			}
 			p {
@@ -285,6 +289,9 @@ div#content {
 		
 		h2 {
 			line-height: 1.25em;
+			a {
+				color: $dark;
+			}
 		}
 		
 		.copy {
@@ -366,6 +373,11 @@ div#content {
 // ----------
 
 footer#footer {
+	font-weight: 400;
+	background-color: $darkblue;
+	border-top: 1px solid $blue;
+	color: $light;
+	padding: 20px 0 0 0;
 	#footer-left, #footer-center, #footer-right {
 		padding: 0 20px;
 	}
@@ -373,11 +385,6 @@ footer#footer {
 	// 	//border: 1px solid $light;
 	// 	border-width: 0 1px;
 	// }
-	font-weight: 400;
-	background-color: $darkblue;
-	border-top: 1px solid $blue;
-	color: $light;
-	padding: 30px 0;
 	ul {
 		li {
 			list-style-type: square;
@@ -412,15 +419,19 @@ footer#footer {
 		}
 	}
 	#twitter-feed {
-		img.tweetphoto {
-			float: right;
-			border: 1px solid $light;
-			margin: 4px 0 24px 5%;
-		}
+		// img.tweetphoto {
+		// 	float: right;
+		// 	border: 1px solid $light;
+		// 	margin: 4px 0 24px 5%;
+		// }
 		p {
-			font-size: 12px;
-			padding: 0 0 16px 0;
+			font-size: 14px;
+			padding: 0 0 8px 0;
 			margin: 0;
+			&.tweet {
+				border-left: 1px solid $light;
+				padding-left: 10px;
+			}
 			&.tweetlink {
 				padding-bottom: 20px;
 			}

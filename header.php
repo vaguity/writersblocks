@@ -67,7 +67,7 @@
 
 <div id="primary-navigation">
     <nav class="row">
-    <div class="col_4 pre_8 omega">
+    <div class="col_5 pre_7 omega">
         <?php wp_nav_menu(
             array(
                 'theme_location' => 'primary-navigation',

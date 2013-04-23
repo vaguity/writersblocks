@@ -41,7 +41,7 @@ get_header(); ?>
 
     <header class="row padding_bottom_30">
       <div class="col_10 suf_2 omega headline">
-      <h2><?php the_title(); ?></a></h2>
+      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </header><!-- .row -->
     
     <div class="row">
@@ -90,6 +90,67 @@ get_header(); ?>
 <?php endif; ?>
 
 </div><!-- #clip -->
+
+<?php
+  $more_clips = get_posts( array (
+    'post_type' => 'clip',
+    'posts_per_page' => '2',
+    'orderby' => 'rand' )
+  );
+
+  if ( !empty ( $more_clips ) ) { 
+      $i = 0; ?>
+
+<div id="more-clips">
+  
+  <div class="row">
+    <div class="col_8 suf_4 omega">
+      <h2>More clips</h2>
+    </div>
+  </div>
+
+  <?php
+    foreach ( $more_clips as $more_clip ) :
+
+      // get all the fields
+      $mc_title = get_the_title( $more_clip->ID );
+      $mc_permalink = get_permalink( $more_clip->ID );
+      $mc_cardtype = get_post_meta( $more_clip->ID, '_clip_display', true );
+      $mc_image = get_post_meta( $more_clip->ID, '_clip_image', true );
+      $mc_quote = get_post_meta( $more_clip->ID, '_clip_pullquote', true );
+
+      // get the cardtype, if it's display_image
+      if ($mc_cardtype == 'display_image') {
+        $mc_card = '<div class="image-card card"><h3><a href="' . $mc_permalink . '">' . $mc_title . '</a></h3><a href="' . $mc_permalink . '"><div class="image" style="background-image: url(\'' . $mc_image . '\');"></div></a></div>';
+      }
+      // for eventual hovertitle: <h3>' . $mc_title . '</h3>\n
+      elseif ($mc_cardtype == 'display_pullquote') {
+        $mc_card = '<div class="quote-card card"><h3><a href="' . $mc_permalink . '">' . $mc_title . '</a></h3><a href="' . $mc_permalink . '"><p>' . $mc_quote . '</p></a></div>';
+      }
+      else {
+        $mc_card = '<div class="title-card card"><a href="' . $mc_permalink . '"><h3>' . $mc_title . '</h3></a></div>';
+      }
+
+      // increment a variable
+      ++$i;
+      // set up the markup for each box
+      if ($i == 1) {
+        echo '<div class="row"><div class="col_4">' . $mc_card . '</div><!-- .col_4 -->';
+      }
+      elseif ($i == 2) {
+        echo '<div class="col_4 suf_4 omega">' . $mc_card . '</div><!-- .col_4 --></div><!-- .row -->';
+      }
+      else { }
+
+  ?>
+
+<?php
+    endforeach;
+  }
+  else { }
+?>
+
+</div><!-- #more-posts -->
 </div><!-- #content -->
 
 <?php get_footer(); ?>

@@ -1,22 +1,27 @@
 $(document).ready(function() {
 
+	// Linkify JS function from <http://recurial.com/programming/javascript-snippet-replace-urls-with-hyperlinks/>
+	function replaceURLWithHTMLLinks(text) {
+	// this looks for urls in html and makes them links
+	// I apologize in advance
+		var exp = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+		return text.replace(exp, "<a href='$1'>$1</a>");
+	}
+
 	function getTweets() {
 
-		var url = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=laureninspace&count=3&include_rts=false&exclude_replies=true&callback=?";
+		var url = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=laureninspace&count=3&include_rts=true&exclude_replies=false&callback=?";
 
 		$.getJSON(url, function(data) {
 			$.each(data, function(i, item) {
 				var tweetId = item.id_str;
-				var tweetText = item.text;
+				var tweetText = replaceURLWithHTMLLinks(item.text);
 				var tweetRawTime = item.created_at;
 				var tweetHandle = item.user.screen_name;
-				var tweetPic = item.user.profile_image_url;
 				var tweetTime = moment(tweetRawTime, "ddd MMM DD HH:mm:ss Z YYYY").fromNow();
-				console.log(tweetText, tweetHandle, tweetPic);
-				console.log(tweetTime);
-				$('#twitter-feed').append(
-					"<img src=\"" + tweetPic + "\" class=\"tweetphoto\" />\n<p class=\"tweet\">" + tweetText + "</p>\n<p class=\"tweetlink\"><a href=\"http://twitter.com/" + tweetHandle + "/status/" + tweetId + "\">" + tweetTime + "</a></p>"
-				);
+				var tweetFinal = "<p class=\"tweet\">" + tweetText + "</p>\n<p class=\"tweetlink\"><a href=\"http://twitter.com/" + tweetHandle + "/status/" + tweetId + "\">" + tweetTime + "</a></p>";
+
+				$('#twitter-feed').append(tweetFinal);
 
 			});
 
@@ -27,3 +32,7 @@ $(document).ready(function() {
 	getTweets();
 
 });
+
+
+//var tweetPic = item.user.profile_image_url;
+// "<img src=\"" + tweetPic + "\" class=\"tweetphoto\" />\n"

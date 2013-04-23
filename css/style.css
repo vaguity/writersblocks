@@ -108,7 +108,7 @@ header#header {
   border-top: 2px solid #3399ff;
   border-bottom: 2px solid white; }
   #primary-navigation nav {
-    text-align: center; }
+    text-align: right; }
     #primary-navigation nav ul {
       list-style-type: none;
       display: block;
@@ -129,23 +129,25 @@ header#header {
 
 div#content {
   background-color: #efefef;
-  padding: 0 0 30px 0; }
-  div#content div#front-page-clips .row > div {
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid white; }
+  div#content div#front-page-clips .row > div, div#content div#more-clips .row > div {
     padding: 10px 0; }
-  div#content div#front-page-clips .card {
+  div#content div#front-page-clips .card, div#content div#more-clips .card {
     background-color: white;
     border: 1px solid #dddddd;
     margin: auto;
-    vertical-align: middle; }
-  div#content div#front-page-clips .image-card {
+    vertical-align: middle;
+    min-height: 210px; }
+  div#content div#front-page-clips .image-card, div#content div#more-clips .image-card {
     padding: 20px; }
-    div#content div#front-page-clips .image-card div.image {
+    div#content div#front-page-clips .image-card div.image, div#content div#more-clips .image-card div.image {
       border: 3px solid #dddddd;
       background-color: #dddddd;
       background-size: cover;
       background-position: center;
       height: 210px; }
-    div#content div#front-page-clips .image-card h3 {
+    div#content div#front-page-clips .image-card h3, div#content div#more-clips .image-card h3 {
       display: none;
       padding: 0;
       font-family: ChunkFive, ChunkFiveRegular, "Helvetica Neue", Arial, Helvetica, "Arial Black", sans-serif;
@@ -153,7 +155,9 @@ div#content {
       line-height: 1.5em;
       height: 210px;
       overflow: hidden; }
-    div#content div#front-page-clips .image-card:hover h3 {
+    div#content div#front-page-clips .image-card:hover h3, div#content div#more-clips .image-card:hover h3 {
+      font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+      font-weight: bold;
       margin: 31px 21px;
       background-color: rgba(50, 50, 50, 0.4);
       border: 3px solid #dddddd;
@@ -162,21 +166,21 @@ div#content {
       top: 0px;
       left: 0px;
       display: block; }
-      div#content div#front-page-clips .image-card:hover h3 a {
+      div#content div#front-page-clips .image-card:hover h3 a, div#content div#more-clips .image-card:hover h3 a {
         color: #3399ff;
         padding: 10px;
         display: block;
         height: 210px;
-        text-shadow: 1px 2px 0 black; }
-        div#content div#front-page-clips .image-card:hover h3 a:hover {
+        text-shadow: 1px 2px 0 #111111; }
+        div#content div#front-page-clips .image-card:hover h3 a:hover, div#content div#more-clips .image-card:hover h3 a:hover {
           color: #3399ff; }
-  div#content div#front-page-clips .quote-card {
+  div#content div#front-page-clips .quote-card, div#content div#more-clips .quote-card {
     padding: 20px; }
-    div#content div#front-page-clips .quote-card a {
+    div#content div#front-page-clips .quote-card a, div#content div#more-clips .quote-card a {
       color: #444444; }
-      div#content div#front-page-clips .quote-card a:hover {
-        color: #111111; }
-    div#content div#front-page-clips .quote-card p {
+      div#content div#front-page-clips .quote-card a:hover, div#content div#more-clips .quote-card a:hover {
+        color: #3399ff; }
+    div#content div#front-page-clips .quote-card p, div#content div#more-clips .quote-card p {
       font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
       font-weight: bold;
       font-size: 24px;
@@ -185,11 +189,11 @@ div#content {
       overflow: hidden;
       margin: 0;
       padding: 0; }
-      div#content div#front-page-clips .quote-card p:before {
+      div#content div#front-page-clips .quote-card p:before, div#content div#more-clips .quote-card p:before {
         content: "“"; }
-      div#content div#front-page-clips .quote-card p:after {
+      div#content div#front-page-clips .quote-card p:after, div#content div#more-clips .quote-card p:after {
         content: "”"; }
-    div#content div#front-page-clips .quote-card h3 {
+    div#content div#front-page-clips .quote-card h3, div#content div#more-clips .quote-card h3 {
       display: none;
       padding: 0;
       font-family: ChunkFive, ChunkFiveRegular, "Helvetica Neue", Arial, Helvetica, "Arial Black", sans-serif;
@@ -197,9 +201,9 @@ div#content {
       line-height: 1.5em;
       height: 210px;
       overflow: hidden; }
-  div#content div#front-page-clips .title-card {
+  div#content div#front-page-clips .title-card, div#content div#more-clips .title-card {
     padding: 20px; }
-    div#content div#front-page-clips .title-card h3 {
+    div#content div#front-page-clips .title-card h3, div#content div#more-clips .title-card h3 {
       font-size: 36px;
       line-height: 1.5em;
       padding: 0;
@@ -212,6 +216,8 @@ div#content {
       font-size: 1.5em; }
   div#content article h2 {
     line-height: 1.25em; }
+    div#content article h2 a {
+      color: #444444; }
   div#content article .copy {
     border: 1px solid #dddddd;
     background-color: #fff;
@@ -272,7 +278,7 @@ footer#footer {
   background-color: #2673bf;
   border-top: 1px solid #3399ff;
   color: #efefef;
-  padding: 30px 0; }
+  padding: 20px 0 0 0; }
   footer#footer #footer-left, footer#footer #footer-center, footer#footer #footer-right {
     padding: 0 20px; }
   footer#footer ul li {
@@ -303,13 +309,12 @@ footer#footer {
       text-decoration: none; }
   footer#footer .rsswidget img {
     display: none; }
-  footer#footer #twitter-feed img.tweetphoto {
-    float: right;
-    border: 1px solid #efefef;
-    margin: 4px 0 24px 5%; }
   footer#footer #twitter-feed p {
-    font-size: 12px;
-    padding: 0 0 16px 0;
+    font-size: 14px;
+    padding: 0 0 8px 0;
     margin: 0; }
+    footer#footer #twitter-feed p.tweet {
+      border-left: 1px solid #efefef;
+      padding-left: 10px; }
     footer#footer #twitter-feed p.tweetlink {
       padding-bottom: 20px; }

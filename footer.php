@@ -59,13 +59,12 @@
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/main.js") ?>
 	   
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <?php /* <script>
+  <script>
     var _gaq=[['_setAccount','UA-11602810-1'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
-  */ ?>
 			   
   <?php wp_footer(); ?>
 

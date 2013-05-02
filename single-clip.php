@@ -150,7 +150,7 @@ get_header(); ?>
   else { }
 ?>
 
-</div><!-- #more-posts -->
+</div><!-- #more-clips -->
 </div><!-- #content -->
 
 <?php get_footer(); ?>

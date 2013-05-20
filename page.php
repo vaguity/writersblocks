@@ -15,7 +15,7 @@ get_header(); ?>
     </div>
     </header>
     <div class="row">
-      <div class="col_8 suf_4 omega">
+      <div class="col_12 omega">
         <div class="copy">
     <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
         </div>
